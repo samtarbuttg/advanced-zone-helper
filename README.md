@@ -43,6 +43,10 @@ https://github.com/user-attachments/assets/ab84076c-92c4-4066-be21-093f74fc34f7
 
 No additional Python packages required - the plugin uses only KiCad's built-in Python environment.
 
+## Documentation
+
+- [Algorithm Mathematics](docs/algorithm_mathematics.md) - Detailed mathematical explanation of the polygon detection, winding direction, and multi-hole zone algorithms
+
 ## License
 
 MIT License

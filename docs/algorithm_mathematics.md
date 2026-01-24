@@ -42,7 +42,13 @@ For a closed polygon, we define $P_n = P_0$ (the last vertex connects back to th
 The **signed area** of a simple polygon $P$ with vertices $(x_0, y_0), (x_1, y_1), \ldots, (x_{n-1}, y_{n-1})$ is computed using the Shoelace formula (also known as Gauss's area formula):
 
 $$
-A_{signed} = \frac{1}{2} \sum_{i=0}^{n-1} \begin{vmatrix} x_i & x_{i+1} \\ y_i & y_{i+1} \end{vmatrix} = \frac{1}{2} \sum_{i=0}^{n-1} (x_i \cdot y_{i+1} - x_{i+1} \cdot y_i)
+A_{signed} = \frac{1}{2} \sum_{i=0}^{n-1} (x_i \cdot y_{i+1} - x_{i+1} \cdot y_i)
+$$
+
+This is equivalent to summing the 2×2 determinants of consecutive vertex pairs:
+
+$$
+\det \begin{pmatrix} x_i & x_{i+1} \\ y_i & y_{i+1} \end{pmatrix} = x_i \cdot y_{i+1} - x_{i+1} \cdot y_i
 $$
 
 where indices are taken modulo $n$ (i.e., $(x_n, y_n) = (x_0, y_0)$).

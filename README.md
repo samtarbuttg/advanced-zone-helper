@@ -8,7 +8,7 @@ https://github.com/user-attachments/assets/ab84076c-92c4-4066-be21-093f74fc34f7
 
 ## Features
 
-- Automatically detects closed loops from selected lines, arcs, and circles
+- Automatically detects closed loops from selected lines, arcs, bezier elements, and circles
 - Creates ring zones between nested outlines (e.g., between two concentric circles)
 - Supports multi-hole zones (outer boundary with multiple inner cutouts)
 - Configure layer, net, priority, and clearance settings

@@ -25,7 +25,7 @@ $$
 P = \{(x_0, y_0), (x_1, y_1), \ldots, (x_{n-1}, y_{n-1})\}
 $$
 
-For a closed polygon, we define $P_n = P_0$ (the last vertex connects back to the first).
+For a closed polygon, we define $`P_n = P_0`$ (the last vertex connects back to the first).
 
 **Curve Primitives:** The algorithm handles various geometric primitives which are discretized into point sequences:
 - **Line Segments**: Direct vertex-to-vertex connections
@@ -39,7 +39,7 @@ For a closed polygon, we define $P_n = P_0$ (the last vertex connects back to th
 
 ### 2.1 The Shoelace Formula
 
-The **signed area** of a simple polygon $P$ with vertices $(x_0, y_0), (x_1, y_1), \ldots, (x_{n-1}, y_{n-1})$ is computed using the Shoelace formula (also known as Gauss's area formula):
+The **signed area** of a simple polygon $P$ with vertices $`(x_0, y_0), (x_1, y_1), \ldots, (x_{n-1}, y_{n-1})`$ is computed using the Shoelace formula (also known as Gauss's area formula). We call it "signed" because the result can be positive or negative depending on whether vertices are ordered counter-clockwise or clockwise—this sign encodes the winding direction.
 
 $$
 A_{signed} = \frac{1}{2} \sum_{i=0}^{n-1} (x_i \cdot y_{i+1} - x_{i+1} \cdot y_i)
@@ -51,11 +51,11 @@ This is the **cross product** of consecutive position vectors, equivalent to the
 \begin{vmatrix} x_i & x_{i+1} \\\ y_i & y_{i+1} \end{vmatrix} = x_i \cdot y_{i+1} - x_{i+1} \cdot y_i
 ```
 
-where indices are taken modulo $n$ (i.e., $(x_n, y_n) = (x_0, y_0)$).
+where indices are taken modulo $n$ (i.e., $`(x_n, y_n) = (x_0, y_0)`$).
 
 ### 2.2 Derivation
 
-The formula derives from **Green's theorem** applied to the area integral. For a region $D$ bounded by curve $C$:
+The Shoelace formula derives from **Green's theorem**. For a region $D$ bounded by curve $C$:
 
 $$
 \iint_D dA = \oint_C x \, dy = -\oint_C y \, dx
@@ -64,19 +64,25 @@ $$
 Using the symmetric form:
 
 $$
-A = \frac{1}{2} \oint_C (x \, dy - y \, dx)
+A_{signed} = \frac{1}{2} \oint_C (x \, dy - y \, dx)
 $$
 
-For a polygon with straight edges, this integral becomes a sum over line segments, yielding the Shoelace formula.
+For a polygon with straight edges, the contour integral becomes a discrete sum over each edge $i$:
+
+$$
+A_{signed} = \frac{1}{2} \sum_{i=0}^{n-1} (x_i \cdot y_{i+1} - x_{i+1} \cdot y_i)
+$$
+
+**Key insight:** The integral preserves sign—traversing the boundary counter-clockwise yields positive area, clockwise yields negative. This is what makes $`A_{signed}`$ useful for detecting winding direction.
 
 ### 2.3 Winding Direction
 
-The **sign** of $A_{signed}$ determines the winding direction:
+The **sign** of $`A_{signed}`$ determines the winding direction:
 
-| Sign of $A_{signed}$ | Winding Direction |
+| Sign of $`A_{signed}`$ | Winding Direction |
 |---------------------|-------------------|
-| $A_{signed} > 0$ | **Counter-clockwise (CCW)** - Exterior boundary |
-| $A_{signed} < 0$ | **Clockwise (CW)** - Hole boundary |
+| $`A_{signed} > 0`$ | **Counter-clockwise (CCW)** - Exterior boundary |
+| $`A_{signed} < 0`$ | **Clockwise (CW)** - Hole boundary |
 
 This property is fundamental for distinguishing outer boundaries from holes in complex shapes.
 
@@ -101,11 +107,11 @@ function polygon_area(P):
 
 ### 3.1 Algorithm Overview
 
-The **Ray Casting Algorithm** (also called the **Crossing Number** or **Even-Odd Rule**) determines whether a point $Q = (x_q, y_q)$ lies inside a polygon $P$.
+The **Ray Casting Algorithm** (also called the **Crossing Number** or **Even-Odd Rule**) determines whether a point $`Q = (x_q, y_q)`$ lies inside a polygon $P$.
 
 ### 3.2 Mathematical Foundation
 
-Cast a ray from point $Q$ in any direction (typically along the positive x-axis: $y = y_q, x > x_q$). Count the number of times this ray crosses the polygon boundary.
+Cast a ray from point $Q$ in any direction (typically along the positive x-axis: $`y = y_q, x > x_q`$). Count the number of times this ray crosses the polygon boundary.
 
 **Decision Rule:**
 
@@ -117,7 +123,7 @@ This follows from the **Jordan Curve Theorem**: any simple closed curve divides 
 
 ### 3.3 Edge Crossing Test
 
-For an edge from $(x_i, y_i)$ to $(x_j, y_j)$, the ray $y = y_q$ crosses this edge if:
+For an edge from $`(x_i, y_i)`$ to $`(x_j, y_j)`$, the ray $`y = y_q`$ crosses this edge if:
 
 1. **Vertical span condition**: The edge straddles the ray's y-coordinate:
    $$
@@ -167,7 +173,7 @@ function point_in_polygon(Q, P):
 
 ### 4.1 Definition
 
-Polygon $P_{inner}$ is **contained within** polygon $P_{outer}$ if:
+Polygon $`P_{inner}`$ is **contained within** polygon $`P_{outer}`$ if:
 
 $$
 \forall \, p \in P_{inner} : p \in \text{interior}(P_{outer})

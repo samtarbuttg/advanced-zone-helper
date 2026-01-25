@@ -403,6 +403,9 @@ class ZoneDialogIPC(wx.Dialog):
     def get_settings(self) -> ZoneSettings:
         """Get zone settings from dialog."""
         layer = self.layer_choice.GetStringSelection()
+        # Handle separator line - default to F.Cu
+        if layer.startswith("─") or not layer:
+            layer = "F.Cu"
         net_selection = self.net_choice.GetStringSelection()
         net_name = None if net_selection == "(none)" else net_selection
 

